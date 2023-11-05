@@ -1,0 +1,13 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+    height: 100px;
+}
+
+.header-container > h1 {
+    color: #76B900;
+    font-family: sans-serif;
+}
