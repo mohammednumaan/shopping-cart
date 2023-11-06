@@ -8,3 +8,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Router />
   </React.StrictMode>,
 )
+
+// fetch('https://fakestoreapi.com/products/category/electronics')
+//  .then((promise) => promise.json())
+//  .then((data) => console.log(data))

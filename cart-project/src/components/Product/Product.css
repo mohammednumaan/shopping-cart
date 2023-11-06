@@ -1,0 +1,21 @@
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    display: flex;
+    margin-right: 300px ;
+    gap: 20px;
+}
+
+.product-name{
+    color: #76B900;
+}
+.product-image{
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    margin-left: -20px;
+}

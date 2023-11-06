@@ -1,0 +1,25 @@
+.nav-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#shop-nav-link,
+#home-nav-link,
+#cart-nav-link{
+    color: #76B900;
+    background-color: black;
+    text-decoration: none;
+
+    font-weight: normal;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+#shop-nav-link:hover,
+#home-nav-link:hover,
+#cart-nav-link:hover{
+    text-decoration: underline;
+}

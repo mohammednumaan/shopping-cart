@@ -6,7 +6,7 @@ import Shop from "./components/Shop/Shop";
 const Router = () => {
   const router = createBrowserRouter([
     {
-      path: "",
+      path: "/",
       element: <App />,
     },
     {
