@@ -21,10 +21,19 @@ export default function ProductCard(){
                 <div className='card-container'>
                     {allProducts.map((product, index) => 
                         
-                        <div key={index} className='card'>
+                        <div key={index} className='product-card'>
 
                             <img className='product-image' src={product.image} alt={product.title} />
-                            <p className='product-name'>{product.title}</p>
+
+                            <div className='product-title-container'>
+                                <h3 className='product-name'>{product.title}</h3>
+                            </div>
+
+                            <div className='product-desc-container'>
+                                <h3 className='product-desc-title'>Description</h3>
+                                <p className='product-desc'>{product.description}</p>
+                            </div>
+                            
                         </div>
                         
                     )}
