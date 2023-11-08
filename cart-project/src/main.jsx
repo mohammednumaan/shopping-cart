@@ -9,6 +9,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>,
 )
 
-fetch('https://fakestoreapi.com/products/category/electronics')
- .then((promise) => promise.json())
- .then((data) => console.log(data))
+// function fetchData(){
+//   return fetch('https://fakestoreapi.com/products/category/electronics')
+//           .then((promise) => promise.json())
+// }
+
+// console.log(fetchData())

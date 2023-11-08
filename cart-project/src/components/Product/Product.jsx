@@ -1,16 +1,13 @@
-import { useEffect, useState } from 'react'
+import add from '../Cart/Cart'
+import Cart from '../Cart/Cart'
 import './Product.css'
 
 export default function ProductCard({products}){
-
-    const [allProducts, setAllProducts] = useState([])
-
-
     return (
         <>
             <div className='card'>
                 <div className='card-container'>
-                    {allProducts.map((product, index) => 
+                    {products.map((product, index) => 
                         
                         <div key={index} className='product-card'>
                             <div className='product-card-container'>
@@ -26,7 +23,7 @@ export default function ProductCard({products}){
                                 </div>
 
                                 <div className='add-product-container'>
-                                    <button id='add-btn'>Add To Cart</button>
+                                    <button id='add-btn' onClick={add(product)}>Add To Cart</button>
                                 </div>
                             </div>                            
                         </div>
