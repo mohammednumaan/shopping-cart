@@ -9,12 +9,18 @@ export default function Cart(){
     return (
         <>  
             <Header title={'Cart'} />
-            {cart.map((product) =>  
-                <>
-                    <h3 className='product-name'>{product.title}</h3>
-                    <p>{product.count}</p>
-                </>
-            )}
+            <div className='cart-products'>
+                {cart.map((product) =>  
+                    <>
+                        <div className='cart-products-container'>
+                            <img className='cart-product-image' src={product.image} />
+                            <h3 className='cart-product-name'>{product.title}</h3>
+                            <p>{product.count}</p>
+                        </div>
+                    </>
+                )}  
+            </div>
+            
         </>
 
     )

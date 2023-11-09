@@ -20,6 +20,7 @@ export default function ProductCard({products, addToCart}){
 
                                 <div className='product-title-container'>
                                     <h3 className='product-name'>{product.title}</h3>
+                                    <p className='product-price'><b>{`$${product.price}`}</b></p>
                                 </div>
 
                                 <div className='product-desc-container'>

@@ -18,23 +18,33 @@
     flex-wrap: wrap;
 
     width: 500px;
-    height: 600px;
+    height: 650px;
 
     padding: 20px;
 
     border: 1px solid #76B900;
     border-radius: 20px;
-    box-shadow: #76B900 -5px 5px, #76B560 -10px 10px, white -7px 7px;
+    transition: all 0.3s ease-in-out;
 
 }
 
+.product-card-container:hover{
+    box-shadow: #76B900 -5px 5px, #76B900 -10px 10px, #76B900 -7px 7px;
+    transform: scale(1.01);
+}
 
-.product-name{
+
+.product-name,
+.product-price{
 
     color: #76B900;
     word-wrap: break-word;
     font-size: 16px;
 
+}
+
+.product-price{
+    font-size: 20px;
 }
 
 .product-desc-title{
@@ -45,6 +55,7 @@
 
 .product-title-container{
     display: flex;  
+    flex-direction: column;
     align-items: center;
 }
 
