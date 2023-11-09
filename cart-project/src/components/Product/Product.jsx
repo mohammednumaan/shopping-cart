@@ -1,8 +1,13 @@
-import add from '../Cart/Cart'
 import Cart from '../Cart/Cart'
 import './Product.css'
 
-export default function ProductCard({products}){
+export default function ProductCard({products, addToCart}){
+
+    const handleAddToCart = (e, product) => {
+        e.preventDefault()
+        addToCart(product)
+    }
+
     return (
         <>
             <div className='card'>
@@ -23,10 +28,11 @@ export default function ProductCard({products}){
                                 </div>
 
                                 <div className='add-product-container'>
-                                    <button id='add-btn' onClick={add(product)}>Add To Cart</button>
+                                    <button id='add-btn' onClick={(event) => handleAddToCart(event, product)}>Add To Cart</button>
                                 </div>
-                            </div>                            
+                            </div>                       
                         </div>
+                        
                     )}
                 </div>
             </div>
