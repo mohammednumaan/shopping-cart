@@ -3,9 +3,8 @@ import './Cart.css'
 import Header from '../Header/Header'
 
 
-export default function Cart({cart}){
-    // const cartList = cart
-    cart.map(product => console.log(product))
+export default function Cart(){
+    const cart = JSON.parse(localStorage.getItem('cartItems')) || []
     
     return (
         <>  

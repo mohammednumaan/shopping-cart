@@ -12,11 +12,11 @@ const Router = () => {
       element: <App />,
     },
     {
-      path: "Shop",
+      path: "/Shop",
       element: <Shop />,
     },
     {
-      path : "Cart",
+      path : "/Cart",
       element: <Cart />,
     }
 

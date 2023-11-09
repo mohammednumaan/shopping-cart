@@ -7,8 +7,8 @@ export default function Navigation(){
             <div className='nav'>
                 <div className='nav-container'>
                     <Link id='home-nav-link' to={"/"}>Home</Link>
-                    <Link id='shop-nav-link' to={'Shop'}>Shop</Link>
-                    <Link id='cart-nav-link' to={'Cart'}>Cart</Link>
+                    <Link id='shop-nav-link' to={'/Shop'}>Shop</Link>
+                    <Link id='cart-nav-link' to={'/Cart'}>Cart</Link>
                 </div>
             </div>
         </>
