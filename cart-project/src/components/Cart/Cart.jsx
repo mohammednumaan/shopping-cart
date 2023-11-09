@@ -10,12 +10,14 @@ export default function Cart(){
         <>  
             <Header title={'Cart'} />
             <div className='cart-products'>
-                {cart.map((product) =>  
+                {cart.map((product) =>
+    
                     <>
+                        
                         <div className='cart-products-container'>
                             <img className='cart-product-image' src={product.image} />
                             <h3 className='cart-product-name'>{product.title}</h3>
-                            <p>{product.count}</p>
+                            <p className='cart-product-count'>{product.count}</p>
                         </div>
                     </>
                 )}  

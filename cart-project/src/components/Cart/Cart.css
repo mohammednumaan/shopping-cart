@@ -30,7 +30,8 @@
     transform: scale(1.01);
 }
 
-.cart-product-name{
+.cart-product-name,
+.cart-product-count{
     color: #76B900;
 }
 

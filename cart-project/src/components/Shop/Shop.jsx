@@ -16,18 +16,27 @@ export default function Shop() {
     // const [error, setError] = useState(null)
 
     const addToCart = (product) => {
-        if (cart.length === 0) {
+        let newObj = Object.assign({}, product, {'count' : 1})
+        console.log(newObj)
+
+        if (cart.length === 0){
             const copyList = []
-            copyList.push(product)
+            copyList.push(newObj)
             setCart(copyList)
-        
         }
+        else{
+            for (let i = 0; i < cart.length; i++){
+                if (cart[i].id === product.id){
+                    cart[i].count++
+                    localStorage.setItem('cartItems', JSON.stringify(cart))  
+                    return;
+                } 
+            }
+            setCart([...cart, newObj])
 
-        else {
-            setCart([...cart, product])
-        }
 
-        
+            
+        } 
     }
 
     useEffect(() => {
