@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 
 export default function getData(){
-    const [allProducts, setAllProducts] = useState([])
-    const [cart, setCart] = useState([])
+    const [allProducts, setAllProducts] = useState(JSON.parse(localStorage.getItem('allProducts')) || []) 
+    const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cartItems')) || [])
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(null)
 
