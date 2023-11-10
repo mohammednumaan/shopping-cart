@@ -1,3 +1,4 @@
+import { BrowserRouter } from 'react-router-dom'
 import Header from '../Header/Header'
 import Home from '../Home/Home'
 import './App.css'
@@ -5,8 +6,11 @@ import './App.css'
 export default function App(){
     return (
         <>
-          <Header title={'Shopping Cart'} />  
-          <Home />
+          <BrowserRouter>
+            <Header title={'Shopping Cart'} />  
+            <Home />
+          </BrowserRouter>
+          
         </>
     )
 }

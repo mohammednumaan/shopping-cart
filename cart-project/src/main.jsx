@@ -8,10 +8,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Router />
   </React.StrictMode>,
 )
-
-// function fetchData(){
-//   return fetch('https://fakestoreapi.com/products/category/electronics')
-//           .then((promise) => promise.json())
-// }
-
-// console.log(fetchData())

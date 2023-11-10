@@ -6,7 +6,6 @@ export default function Home(){
 
     return (
         <>  
-
             <Link id='shop-now-btn' to={'/Shop'}>Shop Now</Link>
         </>
     )
