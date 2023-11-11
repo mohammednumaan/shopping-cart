@@ -5,7 +5,7 @@
     flex-direction: column;
     gap: 40px;
 
-    margin-top: 20px;
+    margin-top: 50px;
     padding: 20px;
 }
 
@@ -31,11 +31,25 @@
 }
 
 .cart-product-name,
-.cart-product-count{
+.cart-product-count,
+.cart-total{
     color: #76B900;
 }
 
 .cart-product-image{
     width: 100px;
     height: 100px;
+}
+
+.cart-checkout-container{
+
+    width: 600px;
+    height: 160px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 450px;
+
+    color: #76B900;
+    border: 2px solid #76B900;
+    border-radius: 20px;
 }

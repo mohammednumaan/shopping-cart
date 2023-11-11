@@ -4,21 +4,20 @@ import './Product.css'
 
 export default function ProductCard({products, addToCart}){
 
+    const [totalPrice, setTotalPrice] =useState(0)
     const [activeInput, setActiveInput] = useState()
     const [inputVal, setInputVal] = useState(1)
 
     const handleAddToCart = (e, product) => {
         e.preventDefault()
-        console.log(product.count)
         addToCart(product)
+    
     }
 
     const handleInputChange = (e, product) => {
         product.count = parseInt(e.target.value)
         setInputVal(e.target.value)
       
-        
-    
     }
 
     return (
