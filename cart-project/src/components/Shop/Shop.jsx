@@ -20,7 +20,7 @@ export default function Shop() {
         else{
             for (let i = 0; i < cart.length; i++){
                 if (cart[i].id === product.id){
-                    cart[i].count++
+                    cart[i].count += product.count
                     localStorage.setItem('cartItems', JSON.stringify(cart))  
                     return;
                 } 

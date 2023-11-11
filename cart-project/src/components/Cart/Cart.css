@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     
    
     border: 2px solid #76B900;
@@ -43,6 +43,11 @@
 
 .cart-checkout-container{
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     width: 600px;
     height: 160px;
     padding: 10px;
@@ -52,4 +57,30 @@
     color: #76B900;
     border: 2px solid #76B900;
     border-radius: 20px;
+    box-shadow: #76B900 -5px 5px, #76B900 -10px 10px, #76B900 -7px 7px;
+}
+
+#checkout-btn{
+    margin-top: 10px;
+    padding: 6px;
+
+    background-color: #76B900;
+    border: 2px solid #76B900;
+    border-radius: 12px;
+
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+#checkout-btn:hover{
+    background-color: #76B900;
+    color: whitesmoke;
+    box-shadow: 0 5px 15px #76B900;
+}
+
+.empty-cart-msg{
+    margin-top: 50px;
+    text-align: center;
+    margin-right: 20px;
+    color: #76B900;
 }
