@@ -14,6 +14,9 @@ export default function getData(){
             })
 
             .then((data) => {
+                data.map((product) => {
+                    product.count = 1
+                })
                 setAllProducts(data)
                 setError(null)
 
@@ -23,7 +26,7 @@ export default function getData(){
                 setAllProducts([])
             })
             .finally(() => setIsLoading(false))
-    },[allProducts])
+    },[])
 
     useEffect(() => {
         localStorage.setItem('allProducts', JSON.stringify(allProducts))

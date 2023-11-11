@@ -1,27 +1,20 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Header from '../Header/Header'
 import ProductCard from '../Product/Product'
 import './Shop.css'
-import Cart from '../Cart/Cart'
 import getData from './Data'
-
 
 export default function Shop() {
 
     const {allProducts, cart, isLoading, error, setCart} = getData()
     
-    // const [allProducts, setAllProducts] = useState([])
-    // const [cart, setCart] = useState([])
-    // const [isLoading, setIsLoading] = useState(true)
-    // const [error, setError] = useState(null)
-
+    console.log(allProducts)
     const addToCart = (product) => {
-        let newObj = Object.assign({}, product, {'count' : 1})
-        console.log(newObj)
+   
 
         if (cart.length === 0){
             const copyList = []
-            copyList.push(newObj)
+            copyList.push(product)
             setCart(copyList)
         }
         else{
@@ -32,10 +25,7 @@ export default function Shop() {
                     return;
                 } 
             }
-            setCart([...cart, newObj])
-
-
-            
+            setCart([...cart, product])  
         } 
     }
 
@@ -45,7 +35,7 @@ export default function Shop() {
 
     return (
 
-        <>  
+        <>   
             <Header title={'Shop'} />
             ({error && <h1 className='error-text'>Sorry We Are Unable To Fetch The Data :(</h1>})
             ({isLoading && <h1 className='loading-text'>Loading...</h1>})
@@ -53,8 +43,9 @@ export default function Shop() {
                 <>
                     <ProductCard products={allProducts} addToCart={addToCart} />              
                 </>
-                
+                    
             )}
+
         </>
     )
 }

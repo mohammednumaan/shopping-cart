@@ -6,11 +6,8 @@ import './App.css'
 export default function App(){
     return (
         <>
-          <BrowserRouter>
-            <Header title={'Shopping Cart'} />  
-            <Home />
-          </BrowserRouter>
-          
+          <Header title={'Shopping Cart'} />  
+          <Home />  
         </>
     )
 }

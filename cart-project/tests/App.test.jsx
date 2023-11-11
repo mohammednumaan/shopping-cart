@@ -1,28 +1,34 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect, expectTypeOf } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import App from '../src/components/App/App';
-import userEvent from '@testing-library/user-event';
+import { BrowserRouter } from 'react-router-dom';
+
+
 
 
 describe('App Componenet', () => {
-    it('Renders Correct Heading and Shop Now Link.', () => {
-        render(<App />);
-        expect(screen.getByRole('heading').textContent).toMatch(/Shopping Cart/i);
-        expect(screen.getByRole('link', {name : 'Shop Now'}).textContent).toMatch(/Shop Now/i)
+    it('Renders correct heading and shop now link.', () => {
+        render(
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        );
+        expect(screen.getByRole('heading').textContent).toEqual('Shopping Cart');
+        expect(screen.getByRole('link', {name : 'Shop Now'}).textContent).toEqual('Shop Now')
     })
 
-    it('On User Click, it should route the user to /Shop', async () => {
+    it("Shop Now's href should link to /Shop", () => {
 
-        const user = userEvent.setup()
-
-        render(<App />);
+        render(
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        );
         const button = screen.getByRole('link',{name : 'Shop Now'})
-
-        await user.click(button)
-        expect(screen.getByRole('heading').textContent).toMatch('Shop')
-        expect(screen.getByRole('link',{name : 'Shop Now'})).toBe(false)
+        expect(button.getAttribute('href')).toBe('/Shop')
 
     })
+
   
 })
 

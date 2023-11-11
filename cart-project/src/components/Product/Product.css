@@ -77,6 +77,19 @@
 
 }
 
+.add-product-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#quantity{
+    width: 30px;
+    padding: 10px;
+}
+
 #add-btn{
     background-color: #76B900;
     color: white;
