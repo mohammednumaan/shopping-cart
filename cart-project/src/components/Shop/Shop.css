@@ -2,6 +2,20 @@ p{
     color: #76B900;
 }
 
+.card{
+    padding: 25px;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+   
+}
+
 .loading-text,
 .error-text{
     display: flex;

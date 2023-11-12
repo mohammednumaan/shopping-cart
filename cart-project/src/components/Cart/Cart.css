@@ -84,3 +84,31 @@
     margin-right: 20px;
     color: #76B900;
 }
+
+#remove-product{
+    position: absolute;
+    background-color: #76B900;
+    border: 2px solid #76B900;
+    border-radius: 20px;
+
+    margin-left: 400px;
+    margin-top: -36px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+#remove-product:hover{
+    background-color: #76B900;
+    color: whitesmoke;
+    box-shadow: 0 5px 15px #76B900;
+}
+
+#remove-product:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #76B900;
+    transform: translateY(4px);
+}
+
+.cart-product-price{
+    width: fit-content;
+}

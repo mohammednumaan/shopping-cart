@@ -46,8 +46,12 @@ export default function Shop() {
             ({error && <h1 className='error-text'>Sorry We Are Unable To Fetch The Data :(</h1>})
             ({isLoading && <h1 className='loading-text'>Loading...</h1>})
             {(isLoading === false) && (
-                <>
-                    <ProductCard products={allProducts} addToCart={addToCart} />              
+                <>  
+                    <div className='card'>
+                        <div className='card-container'>
+                            <ProductCard products={allProducts} addToCart={addToCart} />              
+                        </div>
+                    </div>
                 </>
                     
             )}
