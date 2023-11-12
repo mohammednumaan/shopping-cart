@@ -21,17 +21,22 @@ export default function ProductCard({products, addToCart}){
       
     }
 
-    const handleIncrement = (e, product) => {
-        product.count++
-        // console.log(product.count)
-        setInputVal(product.count)
+    const handleIncrement = (product) => {
+        product.count += 1
+        let value = inputVal
+        value += 1
+        setInputVal(value)
+        
     }
 
-    const handleDecrement = (e, product) => {
+    const handleDecrement = (product) => {
         product.count--
-        setInputVal(product.count)
+        let value = +inputVal
+        value -= 1
+        setInputVal(value)
     }
 
+    console.log(inputVal)
     return (
         <>
             <div className='card'>
@@ -54,9 +59,9 @@ export default function ProductCard({products, addToCart}){
 
                                 <div className='add-product-container'>
                                     <div className='product-quantity'>
-                                        <button id='decrement' onClick={(event) => handleDecrement(event, product)}>-</button>
+                                        <button id='decrement' onClick={() => handleDecrement(product)}>-</button>
                                         <input type='number' id='quantity' value={inputVal} onChange={(event) => handleInputChange(event, product)} min={0} />
-                                        <button id='increment' onClick={(event) => handleIncrement(event, product)}>+</button>
+                                        <button id='increment' onClick={() => handleIncrement(product)}>+</button>
                                     </div>
 
                                     <button id='add-btn' onClick={(event) => handleAddToCart(event, product)}>Add To Cart</button>
