@@ -18,7 +18,7 @@
     flex-wrap: wrap;
 
     width: 500px;
-    height: 650px;
+    height: 680px;
 
     padding: 20px;
 
@@ -88,6 +88,9 @@
 #quantity{
     width: 30px;
     padding: 10px;
+    margin: 7px;
+    border: 1px solid #76B900;
+    border-radius: 4px;
 }
 
 #add-btn{
@@ -113,3 +116,17 @@
     color: whitesmoke;
     box-shadow: 0 5px 15px #76B900;
 }
+
+#increment,
+#decrement{
+    width: 30px;
+    height: 30px;
+
+    color: white;
+    background-color: #76B900;
+    border: 1px solid #76B900;
+    border-radius: 6px;
+    font-weight: 800;
+
+}
+

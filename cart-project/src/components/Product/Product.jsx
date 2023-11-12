@@ -4,25 +4,22 @@ import './Product.css'
 
 export default function ProductCard({products, addToCart}){
 
-    const [totalPrice, setTotalPrice] =useState(0)
-    const [activeInput, setActiveInput] = useState()
+    // const [totalPrice, setTotalPrice] =useState(0)
+    // const [activeInput, setActiveInput] = useState()
     const [inputVal, setInputVal] = useState(1)
 
     const handleAddToCart = (e, product) => {
         e.preventDefault()
-        console.log(product.count)
-        addToCart(product)
+        addToCart(product, inputVal)
     
     }
 
     const handleInputChange = (e, product) => {
-        product.count = parseInt(e.target.value)
-        setInputVal(e.target.value)
+        setInputVal(parseInt(e.target.value))
       
     }
 
     const handleIncrement = (product) => {
-        product.count += 1
         let value = inputVal
         value += 1
         setInputVal(value)
@@ -30,8 +27,8 @@ export default function ProductCard({products, addToCart}){
     }
 
     const handleDecrement = (product) => {
-        product.count--
-        let value = +inputVal
+        let value = inputVal
+        if (inputVal <= 0) return;
         value -= 1
         setInputVal(value)
     }

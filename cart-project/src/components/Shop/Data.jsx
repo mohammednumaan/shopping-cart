@@ -15,7 +15,7 @@ export default function getData(){
 
             .then((data) => {
                 data.map((product) => {
-                    product.count = 1
+                    product.count = 0
                 })
                 setAllProducts(data)
                 setError(null)

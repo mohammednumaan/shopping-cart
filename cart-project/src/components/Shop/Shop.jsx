@@ -8,24 +8,30 @@ export default function Shop() {
 
     const {allProducts, cart, isLoading, error, setCart} = getData()
     
-    console.log(allProducts)
-    const addToCart = (product) => {
+    const addToCart = (product, count) => {
    
-
+        let newObj = Object.assign({}, product, {count : count})
         if (cart.length === 0){
             const copyList = []
-            copyList.push(product)
+            copyList.push(newObj)
             setCart(copyList)
         }
         else{
             for (let i = 0; i < cart.length; i++){
                 if (cart[i].id === product.id){
-                    cart[i].count += product.count
+                    console.log('exis',cart[i].count)
+                    console.log('new',count)
+
+                    cart[i].count += count
                     localStorage.setItem('cartItems', JSON.stringify(cart))  
                     return;
-                } 
+                }
+                
+                console.log('else ca',cart[i].count)
+                console.log('else cou',count) 
             }
-            setCart([...cart, product])  
+            
+            setCart([...cart, newObj])  
         } 
     }
 
