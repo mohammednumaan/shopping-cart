@@ -65,18 +65,33 @@
     padding: 6px;
 
     background-color: #76B900;
+    color: black;
     border: 2px solid #76B900;
     border-radius: 12px;
 
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    
 }
 
-#checkout-btn:hover{
+#checkout-link{
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+#checkout-btn:hover,
+#checkout-link:hover{
     background-color: #76B900;
     color: whitesmoke;
     box-shadow: 0 5px 15px #76B900;
+    
 }
+
+
+
+
 
 .empty-cart-msg{
     margin-top: 50px;

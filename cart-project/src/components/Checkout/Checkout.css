@@ -1,0 +1,20 @@
+.rick-roll{
+    margin-left: 640px;
+    margin-top: 200px;
+    transform: scale(1.5);
+}
+
+#home-link{
+    position: absolute;
+    color: #76B900;
+    text-decoration: none;
+    margin-top: 550px;
+    margin-left: -150px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+#home-link:hover{
+
+    color: whitesmoke;
+}

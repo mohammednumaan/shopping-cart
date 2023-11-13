@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './Cart.css'
 import Header from '../Header/Header'
+import { Link } from 'react-router-dom'
 
 
 
@@ -13,7 +14,14 @@ export default function Cart(){
         let updatedCart = cart.filter(item => item.id != product.id)
         setCart(updatedCart)
     }
-
+    
+    const handleCheckout = () => {
+        if (total === 0){
+            alert('You Cannot Checkout An Empty Cart!')
+        }
+    }
+    
+    
     useEffect(() => {
         
         let totalPrice = 0
@@ -39,7 +47,9 @@ export default function Cart(){
             <div data-testid='checkout' className='cart-checkout-container'>
                 <h2>Total</h2>
                 <div data-testid='total' className='cart-total'>{`$${total}`}</div>
-                <button id='checkout-btn'>Checkout</button>
+                <button id='checkout-btn' onClick={handleCheckout}>
+                    {total !== 0 ? <Link id='checkout-link' to="/Checkout">Checkout</Link> : 'Checkout'}
+                </button>
             </div>
             
             {cart.length === 0 && <h2 className='empty-cart-msg' data-testid='empty'>Your Cart Is Empty! Add Items To Fill Your Cart!</h2>}
