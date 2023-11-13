@@ -19,16 +19,12 @@ export default function Shop() {
         else{
             for (let i = 0; i < cart.length; i++){
                 if (cart[i].id === product.id){
-                    console.log('exis',cart[i].count)
-                    console.log('new',count)
 
                     cart[i].count += count
                     localStorage.setItem('cartItems', JSON.stringify(cart))  
                     return;
                 }
                 
-                console.log('else ca',cart[i].count)
-                console.log('else cou',count) 
             }
             
             setCart([...cart, newObj])  
@@ -43,7 +39,7 @@ export default function Shop() {
 
         <>   
             <Header title={'Shop'} />
-            ({error && <h1 className='error-text'>Sorry We Are Unable To Fetch The Data :(</h1>})
+            ({error && <h1 className='error-text' data-testid='error-msg'>Sorry We Are Unable To Fetch The Data :(</h1>})
             ({isLoading && <h1 className='loading-text'>Loading...</h1>})
             {(isLoading === false) && (
                 <>  

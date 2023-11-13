@@ -1,7 +1,8 @@
 import Navigation from '../Navigation/Navigation'
+import PropTypes from 'prop-types'
 import './Header.css'
 
-export default function Header({title}){
+export default function Header({ title }){
     return (
         <>
             <div className="header">
@@ -12,4 +13,8 @@ export default function Header({title}){
             <Navigation />
         </>
     )
+}
+
+Header.propTypes = {
+     title : PropTypes.string
 }

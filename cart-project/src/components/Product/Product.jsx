@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 import './Product.css'
 
 export default function ProductCard({products, addToCart}){
@@ -10,6 +11,7 @@ export default function ProductCard({products, addToCart}){
         e.preventDefault()
         addToCart(product, inputVal)
         setActiveInput(null)
+        setInputVal(1)
     
     }
 
@@ -30,7 +32,7 @@ export default function ProductCard({products, addToCart}){
         setActiveInput(product.id)
     }
 
-
+    
     return (
         <>
             {products.map((product, index) => 
@@ -62,7 +64,7 @@ export default function ProductCard({products, addToCart}){
                                 <button id='increment' onClick={() => handleIncrement(product)}>+</button>
                             </div>
 
-                            <button id='add-btn' onClick={(event) => handleAddToCart(event, product)}>Add To Cart</button>
+                            <button data-testid={`btn-${index}`} id='add-btn' onClick={(event) => handleAddToCart(event, product)}>Add To Cart</button>
                         </div>
                         
                     </div>
@@ -70,6 +72,11 @@ export default function ProductCard({products, addToCart}){
             )}
         </>
     )
+}
+
+ProductCard.propTypes = {
+    products : PropTypes.arrayOf(PropTypes.object),
+    addToCart : PropTypes.func
 }
 
 
